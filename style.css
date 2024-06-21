@@ -1,15 +1,15 @@
-.container{
+.container {
   background-color: #eee;
 }
-.container-2{
+.container-2 {
   background-color: #eee;
-  max-width: 1000px;/*最大幅を固定*/
+  max-width: 1000px; /*最大幅を固定*/
   margin-left: auto;
   margin-right: auto;
 }
-.container-3{
+.container-3 {
   background-color: #eee;
-  max-width: 1000px;/*最大幅を固定*/
+  max-width: 1000px; /*最大幅を固定*/
   margin-left: auto;
   margin-right: auto;
 }
@@ -20,15 +20,15 @@ img {
   height: auto;
 }
 
-.row{
+.row {
   display: flex;
 }
-.col2{
+.col2 {
   width: 50%;
   border: 1px dashed #999;
 }
 
-.row2{
+.row2 {
   display: flex;
   justify-content: space-between;
   max-width: 640px;
@@ -36,23 +36,8 @@ img {
   outline: 1px dashed #999;
 }
 
-.col2-2{
+.col2-2 {
   /* 子要素のサイズ　/ 親要素のcontent-boxのサイズ * 100% */
   width: calc((300 / 640) * 100%);
   background: #e7e7e7;
-}
-
-.row3{
-  display: flex;
-  justify-content: space-between;
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 20px;
-  outline: 1px dashed #999;
-}
-
-.col2-2{
-  /* 親640 padding 左右20 段落の間20 640-60 / 2 = 290  */
-  width: calc((290 / 600) * 100%);
-
 }
