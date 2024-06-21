@@ -109,3 +109,27 @@ img {
     margin-top: 0;
   }
 }
+
+.case{
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #e7e7e7;
+}
+.case-item{
+  margin: 30px 0;
+}
+.case-item * + * {
+  margin-top: 15px;
+}
+.fz12{
+  font-size: 12px;
+}
+.fz16{
+  font-size: 16px;
+}
+/* 親要素に指定または、継承されている文字サイズを基準 */
+/* 1em=12pxにも1em=16pxにもなりうる */
+.indent-1{
+  text-indent: 1em;
+}
