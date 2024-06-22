@@ -133,3 +133,34 @@ img {
 .indent-1{
   text-indent: 1em;
 }
+
+/* afterやbeforeがものすごく便利なのは「HTMLコードを汚すことなく様々な表現ができる」 */
+/* beforeとafterの違い　<a>{before擬似要素}hoge{after擬似要素}</a> */
+.arw::before{
+  /* befreo、afterで描画するときのお決まり */
+  content: "";
+  /* ブロック→縦並び、横に広がる、高さと幅が指定可能 */
+  /* インライン→横並び、文字の大きさや長さによって変化 */
+  /* インラインブロック→横並び、高さや幅が自由に指定可能 */
+  /* ダブルクォーテーション不要 */
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-right: 0.5em;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+}
+
+/*行送り：
+行送りには例外的に単位なしの倍数を指定しますが、この場合は「em」として計算される仕様となっています。*/
+.article {
+  line-height: 2;
+}
+
+.rem-text{
+  font-size: 1rem;
+}
+.px-text{
+  font-size: 16px;
+}
