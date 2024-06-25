@@ -164,3 +164,11 @@ img {
 .px-text{
   font-size: 16px;
 }
+
+.rem-list li{
+font-size: 1.125rem;
+}
+
+.em-list li{
+  font-size: 1.125em;
+}
