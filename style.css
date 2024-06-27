@@ -172,3 +172,34 @@ font-size: 1.125rem;
 .em-list li{
   font-size: 1.125em;
 }
+
+.vw-box {
+  width: 50vh;
+  height: 50vh;
+  background-color: #ccc;
+}
+
+/*vwで文字サイズ指定：
+vwはビューポート幅に連動するので、文字サイズも画像のようになめらかに伸縮させることが可能です。折返しを発生させたくないタイポグラフィをテキストで実装する際に特に重宝します。*/
+.vw-text{
+  font-size: 5vw;
+}
+
+.min-text{
+  /* 親要素の50%で伸縮、800以上にはならない */
+  width: min(50%, 800px);
+  background-color: #ccc;
+}
+
+.max-text{
+  /* 親要素の50%で伸縮、300以下にはならない */
+  width: max(50%,300px);
+  background-color: #ccc;
+}
+
+.clamp-text{
+  /* 親要素の50%で伸縮、150px以下にならない、800px以上にならない */
+  width: clamp(150px,50%,800px);
+  /*最小18px、最大36pxで画面幅に応じて伸縮  */
+  font-size: clamp(18px,2.8vw,36px);
+}
