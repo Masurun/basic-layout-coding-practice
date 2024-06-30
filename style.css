@@ -203,3 +203,53 @@ vwはビューポート幅に連動するので、文字サイズも画像のよ
   /*最小18px、最大36pxで画面幅に応じて伸縮  */
   font-size: clamp(18px,2.8vw,36px);
 }
+
+.btns{
+  background-color: #e7e7e7;
+}
+.btns__item{
+  margin: 10px;
+  border: 1px dashed #999;
+}
+/* display inline */
+.btn{
+  /* aタグの初期のdisplayプロパティはinlineなのでpaddingは効くが上下のmarginが無効かつwidth/heightが無効 */
+  width: 80%;
+  max-width: 300px;
+  padding: 15px;
+  background-color: skyblue;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+}
+.btn-2{
+  display: block;
+  width: 80%;
+  max-width: 300px;
+  padding: 15px;
+  background-color: skyblue;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btns-3{
+  background-color: #e7e7e7;
+  text-align: center;
+}
+.btns__item-3{
+  display: inline-block;
+  margin: 10px;
+  border: 1px dashed #999;
+}
+
+.btn-3{
+  display: block;
+  width: 80%;
+  max-width: 300px;
+  padding: 15px;
+  background-color: skyblue;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+}
