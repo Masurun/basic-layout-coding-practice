@@ -253,3 +253,52 @@ vwはビューポート幅に連動するので、文字サイズも画像のよ
   text-align: center;
   text-decoration: none;
 }
+.btns-4{
+  background-color: #e7e7e7;
+  text-align: center;
+}
+.btns__item-4{
+  display: inline-block;
+  width: 80%;
+  max-width: 300px;
+  margin: 1px;
+  border: 1px dashed #999;
+
+}
+.btn-4{
+  display: block;
+  background-color: skyblue;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.btns-5{
+  background-color: #e7e7e7;
+  display: flex;
+  flex-direction: column;/*主軸方向を上から下に*/
+  align-items: center;/*交差軸方向に中央揃え*/
+}
+.btns__item-5{
+  width: 80%;
+  max-width: 300px;
+  margin: 1px;
+  border: 1px dashed #999;
+
+}
+.btn-5{
+  display: block;
+  background-color: skyblue;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+}
+@media screen and (min-width:768px),print{
+  .btns-5{
+      flex-direction: row; /*主軸方向を左から右に*/
+      justify-content: center;
+  }
+}

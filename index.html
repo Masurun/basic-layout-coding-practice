@@ -188,6 +188,27 @@
             <div class="btns__item-3"><a href="" class="btn-3">ボタン</a></div>
         </div>
     </div>
+    親要素側側にinlineを指定し、小要素のaタグでblockを指定
+    inlineで幅を指定し、小要素は親要素いっぱいまで広がる
+    <div class="container3-4">
+        <div class="btns-4">
+            <div class="btns__item-4"><a href="" class="btn-4">ボタン</a></div>
+            <div class="btns__item-4"><a href="" class="btn-4">ボタン</a></div>
+        </div>
+    </div>
+    flexboxで横並び中央揃え
+    inline-blockでの幅指定がないため、縮めた時にレスポンシブにならない
+    メディアクエリでレスポンシブ対応する
+    <div class="container3-5">
+        <div class="btns-5">
+            <div class="btns__item-5"><a href="" class="btn-5">ボタン</a></div>
+            <div class="btns__item-5"><a href="" class="btn-5">ボタン</a></div>
+        </div>
+    </div>
+    flexアイテムは主軸に沿って並ぶ
+    主軸方向にアイテムを整列を指定するのがjustify-content
+    主軸方向がrowの時は左右方向を指定するのはjustify-content
+    軸がcolumnだとalign-itemsになる
     </main>
     <footer></footer>
   </body>
