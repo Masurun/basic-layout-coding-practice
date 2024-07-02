@@ -302,3 +302,55 @@ vwはビューポート幅に連動するので、文字サイズも画像のよ
       justify-content: center;
   }
 }
+.container-4-1{
+  max-width: 1440px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.card-4-1{
+  display: block;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  transition: transform .3s;
+}
+.card__thumb-4-1{
+  /* はみ出した部分を隠す */
+  overflow: hidden;
+}
+.card__thumb-4-1 img{
+  max-width: none;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.card__txt-4-1{
+  margin: 20px;
+}
+.card-4-1:hover{
+  color: tomato;
+}
+
+.card-4-1:hover .card__thumb-4-1 img {
+  transform: scale(1.1);
+}
+
+.cardList-4-1{
+  display: flex;
+  flex-direction: column; /* 縦並びにする*/
+  margin-top: -20px; /* 一行目の上のマージンを相殺*/
+}
+.cardList__item-4-1{
+  margin-top: 20px;
+}
+/* 2カラム*/
+@media screen and (min-width: 768px),print {
+  .cardList-4-1{
+      flex-direction: row;/* 横並びにする*/
+      justify-content: space-between;/*アイテムを両端に揃えて均等配置*/
+      flex-wrap: wrap;/*折り返して複数行にする*/
+  }
+  .cardList__item-4-1{
+      width: calc((100% - 20px) / 2)/*アイテムの幅を指定*/
+  }
+}
