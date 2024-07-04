@@ -354,3 +354,66 @@ vwはビューポート幅に連動するので、文字サイズも画像のよ
       width: calc((100% - 20px) / 2)/*アイテムの幅を指定*/
   }
 }
+
+.container-4-2{
+  max-width: 1440px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.card-4-2{
+  display: block;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  color: inherit; /*親の色を継承*/
+  text-decoration: none;
+  transition: coloer .3s;
+}
+.card__thumb-4-2{
+  overflow: hidden;/*はみ出た部分は隠す*/
+}
+.card__thumb-4-2 img {
+  max-width: none;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+.card__txt-4-2{
+  margin: 20px;
+}
+.card4-2:hover{
+  color: tomato;
+}
+.card4-2:hover .card__thumb-4-2 img {
+  transform: scale(1.1);
+}
+
+.cardList-4-2{
+  display: flex;
+  flex-direction: column;/*たて並び*/
+  margin-top: -20px; /*1行目の上マージンを相殺 cardList__item-4-2のmargin-topを消す*/
+}
+.cardList__item-4-2{
+  margin-top: 20px;
+}
+/*2カラム*/
+@media screen and (min-width: 768px),print {
+.cardList-4-2 {
+  flex-direction: row; /*横並びにする*/
+  justify-content: space-between; /*アイテムを両端に揃えて均等配置*/
+  flex-wrap: wrap; /*折り返して複数行にする*/
+}
+.cardList__item4-2 {
+  width: calc((100% - 20px) / 2); /*アイテムの幅を指定*/
+}
+}
+@media screen and (min-width: 992px),print {
+  .cardList__item-4-2{
+      width: calc((100% - 40px) / 3);
+  }
+  /* 要チェック */
+  .cardList-4-2:after{/*最終行を左づめにする、末尾に同じ幅のアイテムを擬似的に配置*/
+      content: "";
+      display: block;
+  width:  calc((100% - 40px) / 3);
+  }
+}
