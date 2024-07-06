@@ -380,10 +380,10 @@ vwはビューポート幅に連動するので、文字サイズも画像のよ
 .card__txt-4-2{
   margin: 20px;
 }
-.card4-2:hover{
+.card-4-2:hover{
   color: tomato;
 }
-.card4-2:hover .card__thumb-4-2 img {
+.card-4-2:hover .card__thumb-4-2 img {
   transform: scale(1.1);
 }
 
@@ -402,10 +402,11 @@ vwはビューポート幅に連動するので、文字サイズも画像のよ
   justify-content: space-between; /*アイテムを両端に揃えて均等配置*/
   flex-wrap: wrap; /*折り返して複数行にする*/
 }
-.cardList__item4-2 {
+.cardList__item-4-2 {
   width: calc((100% - 20px) / 2); /*アイテムの幅を指定*/
 }
 }
+
 @media screen and (min-width: 992px),print {
   .cardList__item-4-2{
       width: calc((100% - 40px) / 3);
@@ -415,5 +416,97 @@ vwはビューポート幅に連動するので、文字サイズも画像のよ
       content: "";
       display: block;
   width:  calc((100% - 40px) / 3);
+  }
+}
+
+
+.container-4-3{
+  max-width: 1440px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.card-4-3{
+  display: block;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  color: inherit;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.card__thumb-4-3{
+  overflow: hidden;
+}
+
+.card__thumb-4-3 img{
+  max-width: none;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-4-3:hover{
+  color: tomato;
+}
+
+.card-4-3:hover .card__thumb-4-3 img {
+  transform: scale(1.1);
+}
+.cardList-4-3{
+  display: flex;
+  /* 縦並び */
+  flex-direction: column;
+  /* 1行目の余白を相殺 */
+  margin-top: -20px;
+}
+.cardList__item-4-3{
+  margin-top: 20px;
+}
+
+/* ２カラム */
+@media screen and (min-width: 768px), print{
+  .cardList-4-3{
+    /* 横並び */
+    flex-direction: row;
+    /* 両端に揃えて均等配置 */
+    justify-content: space-between;
+    /* 折り返して複数行に */
+    flex-wrap: wrap;
+  }
+  .cardList__item-4-3{
+    width: calc((100% - 20px) / 2);
+  }
+}
+
+/* 3カラム */
+@media screen and  (min-width: 992px), print{
+  .cardList__item-4-3{
+    width: calc((100% - 40px) / 3);
+  }
+  /* 最終行を左づめにする */
+  .cardList-4-3:after{
+    content:"";
+    display: block;
+    width: calc((100% - 40px) / 3);
+  }
+}
+
+/* 4カラム after擬似要素、before擬似要素の2つで埋める。5カラム以上はspace-between以外のやり方を検討 */
+@media screen and (min-width: 1200px), print{
+  .cardList__item-4-3{
+    width: calc((100% - 60px) / 4);
+  }
+  /* before擬似要素は要素の先頭に配置される */
+  .cardList-4-3:before,
+  /* 最終行を左づめ */
+  .cardList-4-3::after{
+    content:"";
+    display: block;
+    width: calc((100% - 60px) / 4);
+  }
+  /* 先頭に配置されているbefore擬似要素を末尾へ */
+  /* orderが指定されていない場合は0番目なのでその次の1番目を指定すれば最後にいく */
+  .cardList-4-3:before{
+    order: 1;
   }
 }
