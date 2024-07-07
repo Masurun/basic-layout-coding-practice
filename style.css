@@ -439,6 +439,10 @@ vwはビューポート幅に連動するので、文字サイズも画像のよ
   overflow: hidden;
 }
 
+.card__txt-4-3{
+  margin: 20px;
+}
+
 .card__thumb-4-3 img{
   max-width: none;
   width: 100%;
