@@ -536,3 +536,80 @@ vwはビューポート幅に連動するので、文字サイズも画像のよ
   width: 100%;
   border-radius: 5px 5px 0 0;
 }
+.gnav{
+  background: #e7e7e7;
+}
+.gnavList{
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-right: 1px solid #ccc;
+}
+.gnavList__item{
+  width: 25%;
+  border-left: 1px solid #ccc;
+}
+.gnavList__link{
+  position: relative;
+  display: block;
+  padding: 1em 0;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.gnavList__link:hover{
+  color: #509422;
+}
+
+@media screen and (min-width: 768px),print {
+  .gnavList__link{
+    font-size: 1rem;
+  }
+}
+.hero{
+  display: flex;
+  justify-content: center;/*主軸が横の時左右中央揃え*/
+  align-items: center;/*主軸が横の時の上下中央揃え*/
+  height: 500px;
+  background: #509422;
+}
+.hero__inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background: #fff;
+}
+.heror__txt{
+  font-weight: bold;
+  font-size: 20px;
+}
+.cardList__item-5-3{
+  margin-top: 30px;
+}
+
+@media screen and (min-width:768px),print{
+  .cardList-5-3{
+    display: flex;
+    margin-top: 30px;
+  }
+  .cardList._space-between{
+    justify-content: space-between;
+  }
+  .cardList._space-around{
+    justify-content: space-around;
+  }
+  .cardList._space-evenly{
+    justify-content: space-evenly;
+  }
+  .cardList__item-5-3{
+    width: calc((100% - 80px) / 3);
+  }
+}

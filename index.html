@@ -447,6 +447,90 @@
           </li>
         </ul>
       </div>
+      <h2>flexboxが得意とするレイアウト→シンプルな横並び</h2>
+      <nav class="gnav">
+        <ul class="gnavList">
+          <li class="gnavList__item">
+            <a href="" class="gnavList__link">メニュー</a>
+          </li>
+          <li class="gnavList__item">
+            <a href="" class="gnavList__link">メニュー２</a>
+          </li>
+          <li class="gnavList__item">
+            <a href="" class="gnavList__link">メニュー３</a>
+          </li>
+          <li class="gnavList__item">
+            <a href="" class="gnavList__link">メニュー４</a>
+          </li>
+        </ul>
+      </nav>
+      <h2>flexboxが得意とするレイアウト→上下中央揃え。主軸・交差軸に対してアイテムの整列方法を自由に設定できる。主軸がrowならalign-items:center、columnならjustiify-content:centerで上下方向の中央揃えができる</h2>
+      <div class="hero">
+        <div class="hero__inner">
+          <p class="hero__txt">SAMPLE</p>
+        </div>
+      </div>
+      <h2>flexboxが得意とするレイアウト→均等配置</h2>
+      <div class="cardList _space-between">
+        <section class="cardList__item-5-3">
+          <a href="#" class="card-5-3">
+            <h2 class="card__ttl-5-3">space-between→最初と最後のアイテムを両端に寄せて、残りの余白を均等に</h2>
+            <p class="card__txt-5-3">hogehoghogehogehogehoge</p>
+          </a>
+        </section>
+        <section class="cardList__item-5-3">
+          <a href="#" class="card-5-3">
+            <h2 class="card__ttl-5-3">space-between</h2>
+            <p class="card__txt-5-3">hogehoghogehogehogehoge</p>
+          </a>
+        </section>
+        <section class="cardList__item-5-3">
+          <a href="#" class="card-5-3">
+            <h2 class="card__ttl-5-3">space-between</h2>
+            <p class="card__txt-5-3">hogehoghogehogehogehoge</p>
+          </a>
+        </section>
+      </div>
+      <div class="cardList _space-around">
+        <section class="cardList__item-5-3">
+          <a href="#" class="card-5-3">
+            <h2 class="card__ttl-5-3">space-around→各アイテムの左右に均等に余白を分配</h2>
+            <p class="card__txt-5-3">hogehoghogehogehogehoge</p>
+          </a>
+        </section>
+        <section class="cardList__item-5-3">
+          <a href="#" class="card-5-3">
+            <h2 class="card__ttl-5-3">space-around</h2>
+            <p class="card__txt-5-3">hogehoghogehogehogehoge</p>
+          </a>
+        </section>
+        <section class="cardList__item-5-3">
+          <a href="#" class="card-5-3">
+            <h2 class="card__ttl-5-3">space-around</h2>
+            <p class="card__txt-5-3">hogehoghogehogehogehoge</p>
+          </a>
+        </section>
+      </div>
+      <div class="cardList _space-evenly">
+        <section class="cardList__item-5-3">
+          <a href="#" class="card-5-3">
+            <h2 class="card__ttl-5-3">space-evenly→最初と最後のアイテムの外側、アイテムかんの余白が均等になるように分配</h2>
+            <p class="card__txt-5-3">hogehoghogehogehogehoge</p>
+          </a>
+        </section>
+        <section class="cardList__item-5-3">
+          <a href="#" class="card-5-3">
+            <h2 class="card__ttl-5-3">space-evenly</h2>
+            <p class="card__txt-5-3">hogehoghogehogehogehoge</p>
+          </a>
+        </section>
+        <section class="cardList__item-5-3">
+          <a href="#" class="card-5-3">
+            <h2 class="card__ttl-5-3">space-evenly</h2>
+            <p class="card__txt-5-3">hogehoghogehogehogehoge</p>
+          </a>
+        </section>
+      </div>
     </main>
     <footer></footer>
   </body>
