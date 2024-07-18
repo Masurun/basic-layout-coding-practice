@@ -613,3 +613,119 @@ vwはビューポート幅に連動するので、文字サイズも画像のよ
     width: calc((100% - 80px) / 3);
   }
 }
+.cardList03{
+	display: flex;
+	flex-direction: column; /*縦並び*/
+	margin-top: -20px; /*1行目のマージンを相殺*/
+}
+
+.cardList03__item{
+    margin-top: 20px;
+}
+
+@media screen and (min-width:768px),print{
+    .cardList03{
+        flex-direction: row;/*横並び*/
+        flex-wrap: wrap;/*折り返して複数行にする*/
+        margin-left: -20px;
+    }
+    .cardList03__item{
+        margin-left: 20px;
+        width: calc((100% - 40px) / 2);/*各列の左マージンの合計を差し引いて / 2*/
+    }
+}
+@media screen and (min-width:992px),print{
+    .cardList03__item{
+        width: calc((100% - 60px) / 3);/*各列の左マージンの合計を差し引いて / 3*/
+    }
+}
+
+@media screen and (min-width:1200px),print{
+    .cardList03__item{
+        width: calc((100% - 80px) / 4);/*各列の左マージンの合計を差し引いて / 4*/
+    }
+}
+
+.cardList04{
+    display: grid;
+    gap: 20px;
+}
+@media screen and (min-width: 768px),print{
+    .cardList04{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+/*repeat(繰り返し数,サイズ)*/
+/*repeat(アイテム数,1fr)　→ grid-template-columnsで使う場合*/
+/*repeat(行数,1fr)　→ grid-template-rowsで使う場合*/
+/*fr fraction 分割、分数 gridレイアウトで使用できる単位*/
+/*repeat gridの自動繰り返し配置*/
+@media screen and (min-width: 992px),print{
+    .cardList04{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (min-width: 1200px),print{
+    .cardList04{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+.cardList05{
+    display: grid;
+    gap: 20px;/*アイテム間余白を20pxに*/
+    /*minmaxは最小と最大値を同時に指定できる。最小336px,最大1fr(幅いっぱいまで)*/
+    /*repeat(2,min-max(335px,1fr))となったときにコンテナに入り切らず、横スクロールが発生。カラムを移動させて複数行表示させるのがauto-fit*/
+    grid-template-columns: repeat(auto-fit,minmax(334px,1fr));
+    /*auto-fill→最小200pxのアイテムが5つ入るコンテナに対してアイテムが４つしかない場合に空白はそのままになる*/
+    /*auto-fill→最小200pxのアイテムが5つ入るコンテナに対してアイテムが４つしかない場合にアイテムが拡張する*/
+}
+
+
+/* 聖杯レイアウト */
+.container-5-4{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr auto auto 50px;
+    grid-template-areas:
+        "header-5-4"
+        "main-5-4"
+        "lnav-5-4"
+        "sidebar-5-4"
+        "footer-5-4"
+    ;
+    gap: 20px;
+    max-width: 1000px;
+    min-width: 100vh;
+    margin: 0 auto;
+}
+@media screen and (min-width:768px),print{
+    .container-5-4{
+        grid-auto-columns: 24% 1fr 24%;
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-areas:
+        "header-5-4 header-5-4 header-5-4"
+        "lnav-5-4 main-5-4 sidebar-5-4"
+        "footer-5-4 footer-5-4 footer-5-4"
+    ;
+    }
+}
+.header-5-4{
+    grid-area: header-5-4;
+    background: #509422;
+}
+.main-5-4{
+    grid-area: main-5-4;
+    background: #e5f3db;
+}
+.lnav-5-4{
+    grid-area: lnav-5-4;
+    background: #aeda90;
+}
+.sidebar-5-4{
+    background: #aeda90;
+    grid-area: sidebar-5-4;
+}
+.footer-5-4{
+    background: #509422;
+    grid-area: footer-5-4;
+}
