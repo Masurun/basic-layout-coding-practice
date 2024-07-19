@@ -614,9 +614,9 @@ vwはビューポート幅に連動するので、文字サイズも画像のよ
   }
 }
 .cardList03{
-	display: flex;
-	flex-direction: column; /*縦並び*/
-	margin-top: -20px; /*1行目のマージンを相殺*/
+    display: flex;
+    flex-direction: column; /*縦並び*/
+    margin-top: -20px; /*1行目のマージンを相殺*/
 }
 
 .cardList03__item{
@@ -696,6 +696,7 @@ vwはビューポート幅に連動するので、文字サイズも画像のよ
     gap: 20px;
     max-width: 1000px;
     min-width: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
 }
 @media screen and (min-width:768px),print{
@@ -728,4 +729,47 @@ vwはビューポート幅に連動するので、文字サイズも画像のよ
 .footer-5-4{
     background: #509422;
     grid-area: footer-5-4;
+}
+
+.container-5-5{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px 100px 50vh 1fr;
+  grid-template-areas:
+      "title-5-5"
+      "catch-5-5"
+      "visual-5-5"
+      "contents1-5-5"
+      "contents2-5-5"
+  ;
+  gap: 20px;
+  max-width: 1000px;
+  min-height: 100vh;
+}
+@media screen and (min-width:768px){
+  .container-5-5{
+      grid-template-columns: 1fr 1fr 20%;
+  }
+}
+
+.title-5-5{
+  background-color: red;
+  grid-area: title-5-5;
+}
+.catch-5-5{
+  background-color: blue;
+  grid-area: catch-5-5;
+}
+.visual-5-5{
+  background-color: yellow;
+  grid-area: visual-5-5;
+}
+.ccontents1-5-5{
+  grid-area: contents1-5-5;
+  background-color: #509422;
+}
+
+.contents2-5-5{
+  grid-area: contents1-5-5;
+  background-color: #ccc;
 }
